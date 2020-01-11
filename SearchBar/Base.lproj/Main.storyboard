@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SearchBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMA-M7-Yt8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.90196078430000004" green="0.81568627449999997" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="osQ-Ns-LL3">
+                                <rect key="frame" x="0.0" y="120" width="375" height="658"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="DYq-yQ-669" customClass="TableViewCell" customModule="SearchBar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DYq-yQ-669" id="sNA-Jm-dDy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LRv-uo-eXQ">
+                                                    <rect key="frame" x="15" y="11" width="345" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LRv-uo-eXQ" secondAttribute="bottom" id="UgO-fR-yxD"/>
+                                                <constraint firstItem="LRv-uo-eXQ" firstAttribute="top" secondItem="sNA-Jm-dDy" secondAttribute="topMargin" id="euO-aI-eLu"/>
+                                                <constraint firstItem="LRv-uo-eXQ" firstAttribute="leading" secondItem="sNA-Jm-dDy" secondAttribute="leadingMargin" id="pEV-jm-pHa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LRv-uo-eXQ" secondAttribute="trailing" id="zLC-fd-zb4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.79783818493150682" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="label" destination="LRv-uo-eXQ" id="5JY-8h-Ai6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KMA-M7-Yt8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2po-3d-Dy8"/>
+                            <constraint firstItem="osQ-Ns-LL3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="52Y-Ug-lrV"/>
+                            <constraint firstItem="KMA-M7-Yt8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gqw-1s-Zxk"/>
+                            <constraint firstItem="osQ-Ns-LL3" firstAttribute="top" secondItem="KMA-M7-Yt8" secondAttribute="bottom" symbolic="YES" id="MQY-hS-Oie"/>
+                            <constraint firstItem="osQ-Ns-LL3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZXZ-IC-FrY"/>
+                            <constraint firstItem="osQ-Ns-LL3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mzg-JY-W5S"/>
+                            <constraint firstItem="KMA-M7-Yt8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yhF-J2-Vyf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="KMA-M7-Yt8" id="m89-oT-nBu"/>
+                        <outlet property="tableView" destination="osQ-Ns-LL3" id="zrC-wv-WKK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.400000000000006" y="135.96059113300493"/>
+        </scene>
+    </scenes>
+</document>
